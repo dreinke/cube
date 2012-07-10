@@ -1,0 +1,65 @@
+body {width:100%; height:100%; margin:0; padding:0;}
+
+#content {width:960px; height:400px; margin:-200px -480px; position:absolute; top:50%; left:50%; z-index:5;}
+.choice {width:45%; height:100%; background:#FFF center no-repeat; border:5px Solid #FFF; cursor:pointer;}
+.choice:hover {
+	border:5px Solid #06C;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+
+	transition: border 0.5s ease-in-out;
+	-moz-transition: border 0.5s ease-in-out;
+	-webkit-transition: border 0.5s ease-in-out;
+	-o-transition: border 0.5s ease-in-out;
+}
+#desktop {float:left; background-image:url('../images/desktop.jpg');}
+#mobile {float:right; background-image:url('../images/mobile.jpg');}
+
+/* CUBE */
+#experiment {
+	display: none;
+	-webkit-perspective: 800;
+	-webkit-perspective-origin: 50% 200px;
+	
+	-moz-perspective: 800;
+	-moz-perspective-origin: 50% 200px;
+}
+#cube {position:relative; margin:200px auto 0; height:400px; width:400px;
+	-webkit-transition:-webkit-transform 0.1s linear;
+	-webkit-transform-style:preserve-3d;
+	
+	-moz-transition:-webkit-transform 0.1s linear;
+	-moz-transform-style:preserve-3d;
+}
+.face {border:1px Solid #000; position:absolute; height:360px; width:360px; padding:20px;}
+#cube .one  {
+	-webkit-transform:rotateX(90deg) translateZ(200px);
+	-moz-transform:rotateX(90deg) translateZ(200px);
+	background-color:rgba(255, 255, 255, 0.7);
+}
+#cube .two {
+	-webkit-transform:translateZ(200px);
+	-moz-transform:translateZ(200px);
+	background-color:rgba(0, 0, 255, 0.7);
+}
+#cube .three {
+	-webkit-transform:rotateY(90deg) translateZ(200px);
+	-moz-transform:rotateY(90deg) translateZ(200px);
+	background-color:rgba(0, 255, 0, 0.7);
+}
+#cube .four {
+	-webkit-transform:rotateY(180deg) translateZ(200px);
+	-moz-transform:rotateY(180deg) translateZ(200px);
+	background-color:rgba(255, 0, 0, 0.7);
+}
+#cube .five {
+	-webkit-transform:rotateY(-90deg) translateZ(200px);
+	-moz-transform:rotateY(-90deg) translateZ(200px);
+	background-color:rgba(255, 255, 0, 0.7);
+}
+#cube .six {
+	-webkit-transform:rotateX(-90deg) translateZ(200px) rotate(180deg);
+	-moz-transform:rotateX(-90deg) translateZ(200px) rotate(180deg);
+	background-color:rgba(255, 102, 0, 0.7);
+}
